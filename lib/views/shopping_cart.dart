@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'add_item_dialog.dart';
 import 'shopping_list.dart';
 
 class ShoppingCart extends StatelessWidget {
@@ -11,11 +12,17 @@ class ShoppingCart extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Shopping Cart"),
       ),
-     
       body: const ShoppingList(),
       floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.add),
-          onPressed: () {}),
+          onPressed: () {
+            _openAddItemDialog(context);
+          }),
     );
   }
 }
+
+_openAddItemDialog(BuildContext context) {
+  showDialog(context: context, builder: (context) => AddItemDialog());
+}
+

@@ -9,7 +9,7 @@ class ShoppingList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       itemCount: 10,
-      itemBuilder: (context, i) => ShoppingItem(),
+      itemBuilder: (context, i) => const ShoppingItem(),
     );
   }
 }
