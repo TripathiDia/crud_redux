@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 
+import '../model/cart_item.dart';
 import 'add_item_dialog.dart';
 import 'shopping_list.dart';
+import 'package:redux/redux.dart';
 
 class ShoppingCart extends StatelessWidget {
-  const ShoppingCart({super.key});
+
+
+  final Store<List<CartItem>> store;
+
+  const ShoppingCart({super.key, required this.store});
+
 
   @override
   Widget build(BuildContext context) {

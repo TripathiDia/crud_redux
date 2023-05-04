@@ -13,19 +13,20 @@ class ShoppingItemState extends State<ShoppingItem> {
   @override
   Widget build(BuildContext context) {
     return Dismissible(
-      key: const Key("1"),
+      key: UniqueKey(),
+      onDismissed: (direction) {},
       child: ListTile(
         title: const Text("List"),
         leading: Checkbox(
           value: false,
           onChanged: (newValue) {
-            setState(() {});
+            setState(() {
+            });
           },
         ),
-        trailing: IconButton(onPressed: () {
-          
-        }, icon: const Icon(Icons.delete)),
+        trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete)),
       ),
     );
   }
 }
+
